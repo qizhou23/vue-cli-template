@@ -8,7 +8,9 @@
     "build:test": "vue-cli-service build --mode test",
     "build:pre": "vue-cli-service build --mode pre",
     "lint": "vue-cli-service lint",
-    "lint-fix": "eslint --fix --ext .js --ext .vue src/"
+    "lint-fix": "eslint --fix --ext .js --ext .vue src/",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -30,6 +32,7 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.5.0"
   }
 }

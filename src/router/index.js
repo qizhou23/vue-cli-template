@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 let myComponents = {
-    Home: () => import('@/components/views/Home/Home')
+    Home: () => import('@/views/Home/Home')
 }
 
 const routes = [
