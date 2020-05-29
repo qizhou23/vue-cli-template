@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import request from '@/assets/js/request'
 import directives from '@/assets/js/directives'
+import 'amfe-flexible'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = request
