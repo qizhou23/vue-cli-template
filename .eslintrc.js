@@ -26,6 +26,7 @@ module.exports = {
             4,
             {
                 'SwitchCase': 1,
+                ignoredNodes: ["TemplateLiteral"]
             }
         ],
         'linebreak-style': [
@@ -42,5 +43,6 @@ module.exports = {
         'vue/valid-v-for': 'off',
         'vue/require-v-for-key': 'off',
         'vue/no-unused-vars': 'off',
+        "template-curly-spacing": "off",
     }
 }
