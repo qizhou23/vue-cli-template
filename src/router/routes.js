@@ -11,19 +11,16 @@ let routes = []
 console.log(requireComponent.keys())
 
 requireComponent.keys().forEach(filePath => {
-    const componentConfig = requireComponent(filePath)
-    const defaultConfig = componentConfig.default
-    const configRoutes = defaultConfig.routes
-    configRoutes.map(route => {
-        route.component = lazy(defaultConfig.commonPath, route.component)
-        if (!route.meta || (route.meta && !route.meta.title)) {
-            route.meta = {...{}, ...route.meta}
-            route.meta.title = defaultConfig.title
-        }
-    })
-    routes = [
-        ...routes,
-        ...configRoutes
-    ]
+  const componentConfig = requireComponent(filePath)
+  const defaultConfig = componentConfig.default
+  const configRoutes = defaultConfig.routes
+  configRoutes.map(route => {
+    route.component = lazy(defaultConfig.commonPath, route.component)
+    if (!route.meta || (route.meta && !route.meta.title)) {
+      route.meta = { ...{}, ...route.meta }
+      route.meta.title = defaultConfig.title
+    }
+  })
+  routes = [...routes, ...configRoutes]
 })
 export default routes
